@@ -27,6 +27,10 @@ public class Transaction implements Serializable{
     private Book book;
     @ManyToOne
     private Customer customer;
+
+    public Transaction() {
+    }
+
     public long getTransaction_id() {
         return transaction_id;
     }

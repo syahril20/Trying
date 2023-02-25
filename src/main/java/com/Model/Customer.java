@@ -26,6 +26,9 @@ public class Customer implements Serializable{
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Transaction> transaction = new ArrayList<>();
 
+    public Customer() {
+    }
+
     public long getCustomer_id() {
         return customer_id;
     }
