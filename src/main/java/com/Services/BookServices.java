@@ -1,5 +1,6 @@
 package com.Services;
 
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,9 @@ public class BookServices {
 
     public Iterable<Book> findAll(){
         return bookRepo.findAll();
+    }
+
+    public Optional<Book> findById(Long id){
+        return bookRepo.findById(id);
     }
 }
